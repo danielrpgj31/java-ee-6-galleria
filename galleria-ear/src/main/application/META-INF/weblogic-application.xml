@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-application
+	xmlns="http://xmlns.oracle.com/weblogic/weblogic-application"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-application http://xmlns.oracle.com/weblogic/weblogic-application/1.6/weblogic-application.xsd">
+	<prefer-application-packages>
+		<package-name>antlr.*</package-name>
+		<package-name>oracle.jdbc.*</package-name>
+		<package-name>oracle.jdbc.aq.*</package-name>
+		<package-name>oracle.jdbc.babelfish.*</package-name>
+		<package-name>oracle.jdbc.connector.*</package-name>
+		<package-name>oracle.jdbc.dcn.*</package-name>
+		<package-name>oracle.jdbc.diagnostics.*</package-name>
+		<package-name>oracle.jdbc.driver.*</package-name>
+		<package-name>oracle.jdbc.internal.*</package-name>
+		<package-name>oracle.jdbc.oci.*</package-name>
+		<package-name>oracle.jdbc.oracore.*</package-name>
+		<package-name>oracle.jdbc.pool.*</package-name>
+		<package-name>oracle.jdbc.pooling.*</package-name>
+		<package-name>oracle.jdbc.proxy.*</package-name>
+		<package-name>oracle.jdbc.replay.*</package-name>
+		<package-name>oracle.jdbc.rowset.*</package-name>
+		<package-name>oracle.jdbc.util.*</package-name>
+		<package-name>oracle.jdbc.xa.*</package-name>
+		<package-name>oracle.jpub.runtime.*</package-name>
+		<package-name>oracle.net.ano.*</package-name>
+		<package-name>oracle.net.aso.*</package-name>
+		<package-name>oracle.net.jdbc.*</package-name>
+		<package-name>oracle.net.jndi.*</package-name>
+		<package-name>oracle.net.ns.*</package-name>
+		<package-name>oracle.net.nt.*</package-name>
+		<package-name>oracle.net.resolver.*</package-name>
+		<package-name>oracle.security.o3logon.*</package-name>
+		<package-name>oracle.security.o5logon.*</package-name>
+		<package-name>oracle.sql.*</package-name>
+		<package-name>oracle.sql.converter.*</package-name>
+		<package-name>org.apache.commons.*</package-name>
+		<package-name>org.hibernate.validator.*</package-name>
+		<package-name>org.slf4j.*</package-name>
+		<package-name>org.slf4j.helpers.*</package-name>
+		<package-name>org.slf4j.spi.*</package-name>
+		<package-name>org.w3c.dom.*</package-name>
+	</prefer-application-packages>
+</weblogic-application>

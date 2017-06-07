@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="galleria-ejb-test" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>info.galleria.domain.Account</class>
+		<shared-cache-mode>ALL</shared-cache-mode>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@10.154.137.12:1521/PORA12C1.LIBRA.COM"/>
+			<property name="javax.persistence.jdbc.user" value="GALLERIA"/>
+			<property name="javax.persistence.jdbc.password" value="welcome1"/>
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.cache.region.factory_class" value="com.oracle.coherence.hibernate.cache.CoherenceRegionFactory" />
+			<property name="hibernate.cache.use_second_level_cache" value="true" />
+			<property name="com.oracle.coherence.hibernate.cache.cache_config_file_path" value="/u01/app/middleware/wls1213/user_projects/domains/wl_server/config/cohrence/hibernate-second-level-cache-config.xml" />
+			
+		</properties>
+	</persistence-unit>
+</persistence>

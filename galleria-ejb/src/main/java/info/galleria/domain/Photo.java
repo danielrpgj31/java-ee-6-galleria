@@ -10,6 +10,7 @@ import javax.validation.constraints.*;
  * The persistent class for the PHOTOS database table.
  * 
  */
+@Cacheable
 @Entity
 @Table(name = "PHOTOS")
 @NamedQueries({

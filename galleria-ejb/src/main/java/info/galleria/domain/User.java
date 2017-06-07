@@ -4,7 +4,6 @@ import info.galleria.service.ejb.UserService;
 
 import java.io.Serializable;
 import java.util.*;
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -12,9 +11,11 @@ import javax.validation.constraints.*;
  * The persistent class for the USERS database table.
  * 
  */
+
 @Entity
 @Table(name = "USERS")
 @NamedQuery(name = "info.galleria.domain.User.findAllUsers", query = "SELECT u FROM User u")
+@Cacheable
 public class User implements Serializable
 {
 	private static final long serialVersionUID = 1L;

@@ -10,6 +10,7 @@ import javax.validation.constraints.*;
  * The persistent class for the ALBUMS database table.
  * 
  */
+@Cacheable
 @Entity
 @Table(name = "ALBUMS")
 @NamedQueries({

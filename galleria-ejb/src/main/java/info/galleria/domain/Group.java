@@ -9,6 +9,7 @@ import javax.persistence.*;
  * The persistent class for the GROUPS database table.
  * 
  */
+@Cacheable
 @Entity
 @Table(name = "GROUPS")
 @NamedQuery(name = "info.galleria.domain.Group.findAllGroups", query = "SELECT g FROM Group g")

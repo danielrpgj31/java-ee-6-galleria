@@ -13,11 +13,13 @@
     		<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.WeblogicJtaPlatform" />
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
-			 <!-- Second-level cache config -->
+			<!-- Second-level cache config -->
+			<!-- 
 			<property name="hibernate.cache.region.factory_class" value="com.oracle.coherence.hibernate.cache.CoherenceRegionFactory" />
 			<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.JBossTransactionManagerLookup"/>
 			<property name="hibernate.cache.use_second_level_cache" value="true" />
-			<property name="com.oracle.coherence.hibernate.cache.cache_config_file_path" value="/u01/app/middleware/wls1213/user_projects/domains/wl_server/config/cohrence/hibernate-second-level-cache-config.xml" />
+			<property name="com.oracle.coherence.hibernate.cache.cache_config_file_path" value="D:\SESP\Ambiente\Server\wls12130\user_projects\domains\cluster_domain\config\coherence\coherence-hibernate\hibernate-second-level-cache-config.xml" />
+			-->
 		</properties>
 		
 	</persistence-unit>

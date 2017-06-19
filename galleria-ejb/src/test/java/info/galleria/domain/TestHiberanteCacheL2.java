@@ -50,9 +50,8 @@ public class TestHiberanteCacheL2
         // we actually start to work with entity manager
         EntityTransaction tx = em.getTransaction();
         tx.begin();
-       
+               
         // we create a sample user objec (just ensure that it doesn't appear in the database)
-        
         info.galleria.domain.Account account = new info.galleria.domain.Account();
         //account.setAccountNumber(null);
         account.setBalance(11.00F);

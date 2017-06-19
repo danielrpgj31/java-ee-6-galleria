@@ -15,7 +15,6 @@
 			<property name="hibernate.cache.region.factory_class" value="com.oracle.coherence.hibernate.cache.CoherenceRegionFactory" />
 			<property name="hibernate.cache.use_second_level_cache" value="true" />
 			<property name="com.oracle.coherence.hibernate.cache.cache_config_file_path" value="/u01/app/middleware/wls1213/user_projects/domains/wl_server/config/cohrence/hibernate-second-level-cache-config.xml" />
-			
 		</properties>
 	</persistence-unit>
 </persistence>

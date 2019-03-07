@@ -68,6 +68,7 @@ public class AlbumManager
 		}
 		catch (EJBException ejbEx)
 		{
+			System.out.println("########################### EJB Ex: " + ejbEx.toString());
 			String messageKey = "CreateAlbum.InternalFailureMessage";
 			logger.error(Messages.getLoggerString(messageKey), ejbEx);
 			processContainerException(messageKey);

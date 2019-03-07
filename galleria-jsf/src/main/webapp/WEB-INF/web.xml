@@ -8,14 +8,17 @@
 		<param-value>Development</param-value>
 		<!-- <param-value>Production</param-value> -->
 	</context-param>
+	<!--
 	<context-param>
 		<param-name>coherence-web-sessions-enabled</param-name>
 		<param-value>true</param-value>
 	</context-param>
+	// -->
 	<context-param>
 		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
 		<param-value>server</param-value>
 	</context-param>
+	<!--
 	<filter>
 		<filter-name>Galleria User Redirect Filter</filter-name>
 		<filter-class>info.galleria.filters.UserRedirectFilter</filter-class>
@@ -24,6 +27,8 @@
 		<filter-name>Galleria Authentication Filter</filter-name>
 		<filter-class>info.galleria.filters.AuthenticationFilter</filter-class>
 	</filter>
+	//-->
+	
 	<filter>
 		<filter-name>Facelet Resource Filter</filter-name>
 		<filter-class>info.galleria.filters.ResourceFilter</filter-class>
@@ -36,6 +41,8 @@
 			<param-value>51200</param-value>
 		</init-param>
 	</filter>
+
+	<!--
 	<filter-mapping>
 		<filter-name>Galleria User Redirect Filter</filter-name>
 		<url-pattern>/Index.xhtml</url-pattern>
@@ -52,6 +59,8 @@
 		<filter-name>Galleria Authentication Filter</filter-name>
 		<url-pattern>/private/*</url-pattern>
 	</filter-mapping>
+	// -->
+
 	<filter-mapping>
 		<filter-name>Facelet Resource Filter</filter-name>
 		<url-pattern>/templates/*</url-pattern>
@@ -76,6 +85,7 @@
 	<welcome-file-list>
 		<welcome-file>Index.xhtml</welcome-file>
 	</welcome-file-list>
+	<!--
 	<login-config>
 		<auth-method>FORM</auth-method>
 		<form-login-config>
@@ -87,4 +97,5 @@
 		<description>All registered Users belong to this Group</description>
 		<role-name>RegisteredUsers</role-name>
 	</security-role>
+	//-->
 </web-app>

@@ -176,9 +176,9 @@ public class AlbumServiceImpl implements AlbumService
 	 */
 	private User findCurrentUser(String contextExceptionMessage) throws AlbumException
 	{
-		Principal caller = context.getCallerPrincipal();
-		String userId = caller.getName();
-		User user = userRepository.findById(userId);
+		//Principal caller = context.getCallerPrincipal();
+		//String userId = caller.getName();
+		User user = userRepository.findById("admin");
 		if (user == null)
 		{
 			logger.error("The principal for the caller was not found.");

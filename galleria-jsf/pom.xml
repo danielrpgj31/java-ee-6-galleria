@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>info.galleria</artifactId>
 		<groupId>br.com.oracle.acs</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>prdv1</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>galleria-jsf</artifactId>
@@ -16,8 +16,11 @@
 				<version>2.2</version>
 				<configuration>
 					<archive>
+						<manifestEntries>
+							<Weblogic-Application-Version>v5</Weblogic-Application-Version>
+						</manifestEntries>
 						<manifest>
-							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultImplementationEntries>false</addDefaultImplementationEntries>
 						</manifest>
 					</archive>
 				</configuration>
@@ -25,30 +28,31 @@
 		</plugins>
   	</build>
 	<dependencies>
+		<!--
 		<dependency>
 			<groupId>br.com.oracle.acs</groupId>
 			<artifactId>galleria-ejb</artifactId>
 			<type>jar</type>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.3</version>
 			<scope>provided</scope>
 		</dependency>
+		//-->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.5.6</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>1.5.6</version>
-			<scope>provided</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
 			<version>3.0.M2</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<!-- For use with the PrimeFaces file upload component -->
@@ -69,6 +73,7 @@
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4.4</version>
+			<scope>provided</scope>
 		</dependency>
 		<!-- Dependencies for DbUnit --> 
 		<dependency>
@@ -93,7 +98,7 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.5.6</version>
-			<scope>provided</scope>
+			
 		</dependency>
 	</dependencies>
 

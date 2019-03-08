@@ -2,15 +2,14 @@ package info.galleria.view.album;
 
 import info.galleria.domain.*;
 import info.galleria.i18n.Messages;
-import info.galleria.service.ejb.*;
-import info.galleria.service.ejb.ApplicationException;
-import info.galleria.view.util.ExceptionProcessor;
+
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;
 
 import javax.ejb.*;
+import javax.mail.*;
 import javax.faces.application.*;
 import javax.faces.application.FacesMessage.Severity;
 import javax.faces.bean.*;
@@ -30,11 +29,11 @@ public class AlbumManager implements Serializable
 	private CreateAlbumRequest createRequest;
 	private EditAlbumRequest editRequest;
 
-	@EJB
-	private AlbumService albumService;
+	//@EJB
+	//private AlbumService albumService;
 
-	@EJB
-	private PhotoService photoService;
+	//@EJB
+	//private PhotoService photoService;
 
 	private Album currentAlbum;
 
@@ -58,24 +57,18 @@ public class AlbumManager implements Serializable
 		String result = null;
 		try
 		{
+			javax.mail.URLName urlName = null;
 			String name = createRequest.getName();
 			String description = createRequest.getDescription();
 			Album album = new Album(name, description);
-			albumService.createAlbum(album);
+			//albumService.createAlbum(album);
 			String key = "CreateAlbum.AlbumCreationSuccessMessage";
 			buildMessageForDisplay(key, FacesMessage.SEVERITY_INFO);
 			result = "/private/HomePage.xhtml?faces-redirect=true";
 		}
-		catch (AlbumException albumEx)
+		catch (Exception albumEx)
 		{
-			populateErrorMessage(albumEx);
-		}
-		catch (EJBException ejbEx)
-		{
-			System.out.println("########################### EJB Ex: " + ejbEx.toString());
-			String messageKey = "CreateAlbum.InternalFailureMessage";
-			logger.error(Messages.getLoggerString(messageKey), ejbEx);
-			processContainerException(messageKey);
+			System.out.println("########################### EJB Ex: " + albumEx.toString());
 		}
 		return result;
 	}
@@ -83,6 +76,7 @@ public class AlbumManager implements Serializable
 	public void fetchOwnedAlbums()
 	{
 		init = true;
+		/*
 		try
 		{
 			ownedAlbums = albumService.findCurrentUserAlbums();
@@ -98,11 +92,13 @@ public class AlbumManager implements Serializable
 			String messageKey = "FindAllAlbums.InternalErrorMessage";
 			processContainerException(messageKey);
 		}
+		*/
 		return;
 	}
 
 	public String deleteAlbum()
 	{
+		/*
 		try
 		{
 			albumService.deleteAlbum(currentAlbum);
@@ -120,12 +116,14 @@ public class AlbumManager implements Serializable
 			String messageKey = "DeleteAlbum.InternalErrorMessage";
 			processContainerException(messageKey);
 		}
+		*/
 		return "/private/HomePage.xhtml?faces-redirect=true";
 	}
 
 	public String editAlbum()
 	{
 		String result = null;
+		/*
 		try
 		{
 			currentAlbum.setName(editRequest.getName());
@@ -146,6 +144,7 @@ public class AlbumManager implements Serializable
 			String messageKey = "ModifyAlbum.InternalErrorMessage";
 			processContainerException(messageKey);
 		}
+		*/
 		return result;
 	}
 
@@ -221,6 +220,7 @@ public class AlbumManager implements Serializable
 	private void initBean()
 	{
 		init = true;
+		/*
 		try
 		{
 			currentAlbum = albumService.findAlbumById(currentAlbumId);
@@ -241,6 +241,7 @@ public class AlbumManager implements Serializable
 			processContainerException(messageKey);
 			redirectToMainPage();
 		}
+		*/
 	}
 
 	private void redirectToMainPage()
@@ -279,11 +280,6 @@ public class AlbumManager implements Serializable
 		Locale locale = context.getViewRoot().getLocale();
 		FacesMessage message = new FacesMessage(messageSeverity, Messages.getString(messageKey, locale), null);
 		context.addMessage(null, message);
-	}
-
-	private void populateErrorMessage(ApplicationException exception)
-	{
-		ExceptionProcessor.populateErrorMessage(exception);
 	}
 
 }

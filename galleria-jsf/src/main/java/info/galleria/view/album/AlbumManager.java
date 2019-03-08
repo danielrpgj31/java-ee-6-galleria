@@ -7,6 +7,7 @@ import info.galleria.service.ejb.ApplicationException;
 import info.galleria.view.util.ExceptionProcessor;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.*;
 
 import javax.ejb.*;
@@ -19,8 +20,11 @@ import org.slf4j.*;
 
 @ManagedBean
 @ViewScoped
-public class AlbumManager
+public class AlbumManager implements Serializable
 {
+
+	private static final long serialVersionUID = 5317481712298496566L;
+
 	private static final Logger logger = LoggerFactory.getLogger(AlbumManager.class);
 
 	private CreateAlbumRequest createRequest;

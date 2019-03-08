@@ -22,5 +22,8 @@
     </session-descriptor>
 
     //-->
-    
+
+    <library-ref>
+        <library-name>primefaces-3</library-name>
+    </library-ref>    
 </weblogic-web-app>

@@ -14,29 +14,33 @@
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
+				<!--
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Weblogic-Application-Version>v5</Weblogic-Application-Version>
+							<Weblogic-Application-Version>v8</Weblogic-Application-Version>
+							<Extension-List>javaxmail</Extension-List>
+							<javaxmail-Extension-Name>javax.mail</javaxmail-Extension-Name>
 						</manifestEntries>
 						<manifest>
 							<addDefaultImplementationEntries>false</addDefaultImplementationEntries>
 						</manifest>
 					</archive>
 				</configuration>
+				//-->
 			</plugin>
 		</plugins>
   	</build>
 	<dependencies>
-		<!--
+		
 		<dependency>
 			<groupId>br.com.oracle.acs</groupId>
 			<artifactId>galleria-ejb</artifactId>
 			<type>jar</type>
-			<version>0.0.3</version>
+			<version>prdv1</version>
 			<scope>provided</scope>
 		</dependency>
-		//-->
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
